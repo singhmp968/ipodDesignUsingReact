@@ -7,16 +7,6 @@ class Ipodtouchcomp extends React.Component {
         super();
     }
 
-    // circlwheel = ()=>{
-    //     // for getting the wheel from zingtouch
-    //     // var myElement = document.getElementById('circle-boxx');
-    //     // var myRegion = new ZingTouch.Region(myElement);
-      
-    //     // myRegion.bind(myElement, 'rotate', function(e) {
-    //     //     console.log('Tap gesture emitted: ' + e.detail.distanceFromLast);
-    //     // });
-    //     // //console.log('hey man')
-    // }
     render() {
         //console.log(this.props.zingo)
         return(
@@ -34,11 +24,11 @@ class Ipodtouchcomp extends React.Component {
                     <div className="bottom-button">
 
                     </div>
-                    <div className="inner-circle" >
+                    <div className="inner-circle" onClick = {()=> this.props.selectItem()} >
 
                     </div>
                 </div>
-            sdasda
+              sdasda
             </div>
         )
     }
