@@ -12,6 +12,7 @@ class App extends React.Component {
     super()
     this.state = {
       Motion:0,
+      mainScreenOrNot: true,
       ScreenDisplay:''
     }
     this.currentAngle=0;
@@ -56,6 +57,9 @@ class App extends React.Component {
 // click on the circulra box
 displayScreens =()=>{
   const motionValue = this.state.Motion;
+  this.setState({
+    mainScreenOrNot:false
+  })
   console.log('hey man!!',motionValue);
   if(motionValue === 0){
      console.log('Cover fole',this.state);
@@ -79,13 +83,19 @@ displayScreens =()=>{
      })
   }
 }
+
+onMenu = ()=>{
+  this.setState({
+    mainScreenOrNot:true
+  })
+}
 render() {
 
   return (
     <div className="App">
         <h1>Mini project</h1>
-        <MenuScreen motionValues = {this.state.Motion} screenValue = { this.state.ScreenDisplay }/>
-        <Ipodtouch zingo = {this.zingoComponentTest} selectItem = {this.displayScreens} />
+        <MenuScreen motionValues = {this.state.Motion} screenValue = { this.state.ScreenDisplay } mainScreenOrNot = {this.state.mainScreenOrNot}/>
+        <Ipodtouch zingo = {this.zingoComponentTest} selectItem = {this.displayScreens}  onMenu = {this.onMenu}/>
     </div>
   );
 }

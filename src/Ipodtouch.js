@@ -18,7 +18,7 @@ class Ipodtouchcomp extends React.Component {
                     <div className='backward-button'>
 
                     </div>
-                    <div className="top-button">
+                    <div className="top-button" onClick = {()=> this.props.onMenu()}>
 
                     </div>
                     <div className="bottom-button">

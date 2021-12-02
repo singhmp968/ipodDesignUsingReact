@@ -11,15 +11,15 @@ render() {
     let ActiveAndNotActiveelem = []
     let c = 0;
     let secondHalfScreen='';
-    console.log('this props=> values',this.props)
+    console.log('this props=> values',this.props.mainScreenOrNot)
     c = this.props.motionValues
-    console.log('c value',c)
     for(let i =0;i<MenuVaraibles.length;i++) {
         ActiveAndNotActiveelem.push(c===i ? (<div style={styles.upandDownSelect}> {MenuVaraibles[i]} </div>):
         (<div style={styles.menuTitles}> {MenuVaraibles[i]} </div>)
     
         )}
         console.log('==>',this.props.screenValue)
+    if(!this.props.mainScreenOrNot){
     if(this.props.screenValue === 'covers'){  
         secondHalfScreen= <HomeComp />        
     }else if(this.props.screenValue ==='musics'){
@@ -30,17 +30,19 @@ render() {
     }else if(this.props.screenValue ==='setting'){
         secondHalfScreen = <SettingComp />
     }
-
+    }else{
+        secondHalfScreen = ActiveAndNotActiveelem
+    }
 
     return (
     <div style={styles.mainScreenBox}> 
         <div>
-            {ActiveAndNotActiveelem}
+            {secondHalfScreen}
        </div>
-        <div style = {styles.otherHalfScree}>
-               {secondHalfScreen} 
+        {/* <div style = {styles.otherHalfScree}>
+                {secondHalfScreen} 
     
-        </div>
+        </div> */}
     </div>
     )};
 
@@ -51,7 +53,7 @@ const styles = {
         display:'flex',
         flexDirection:'row',
         height: 'auto',
-        width:'200px',
+        width:'100px',
         border:'1px solid black',
         marginBottom :'10px'
         
