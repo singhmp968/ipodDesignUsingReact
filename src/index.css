@@ -8,26 +8,29 @@ body {
 }
 
 .menu_and_touch{
-  height: 344px;
-  width: 175px;
+  height: 291px;
+  width: 160px;
   border: 1px solid blue;
   position: relative;
   left: 50%;
+  border-radius: 11px;
+  background-color: silver;
 }
 .main-box{
   height: 140px;
   width: 140px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   position: absolute;
-  left: 10%;
-  top:41%
+  left: 6%;
+    top: 50%;
 }
 .circle-box{
   position: absolute;
   height: 100%;
   width: 100%;
   border: 1px solid black;
-  border-radius: 50%
+  border-radius: 50%;
+  background-color: white;
 }
 .inner-circle{
   position: absolute;
@@ -36,7 +39,8 @@ body {
   left: 23%;
   top: 23%;
   border: 1px solid black;
-  border-radius: 50%
+  border-radius: 50%;
+  background-color: white;
   
 }
 .forward-button{

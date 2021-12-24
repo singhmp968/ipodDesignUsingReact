@@ -60,22 +60,24 @@ const styles = {
          width: '140px',
          display:'flex',
          flexDirection:'row',
-         height:'140px',
+         height:'128px',
          position: 'absolute',
-         left: '10%'
+         left: '6%',
+         marginTop: '11px',
+        // border: '1px solid black'
     },
     mainScreenBox : {
         display:'flex',
         flexDirection:'row',
         height: 'auto',
         width:'85px',
-        border:'1px solid black',
+        //border:'1px solid black',
         marginBottom :'10px'
         
     },
     div_withBack:{
-        width:'54px',
-        height:'130px',
+        width:'56px',
+        height:'128px',
         backgroundColor:'blue'
     },
     backImage :{
