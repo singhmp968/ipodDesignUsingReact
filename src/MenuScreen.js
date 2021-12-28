@@ -6,12 +6,14 @@ import SettingComp from "./SettingComp";
 class MenuScreen extends React.Component {
 
 render() {
+    const propsValue = this.props;
+    console.log('mnnnn',propsValue)
     let MenuVaraibles = ['cover flow','Musicss','games','setting'];
     let activeTItem = 0
     let ActiveAndNotActiveelem = []
     let c = 0;
     let secondHalfScreen='';
-    console.log('this props=> values',this.props.mainScreenOrNot)
+    console.log('this props=> values',this.props.musicScreen)
     c = this.props.motionValues
     for(let i =0;i<MenuVaraibles.length;i++) {
         ActiveAndNotActiveelem.push(c===i ? (<div style={styles.upandDownSelect}> {MenuVaraibles[i]} </div>):
@@ -23,7 +25,7 @@ render() {
     if(this.props.screenValue === 'covers'){  
         secondHalfScreen= <HomeComp />        
     }else if(this.props.screenValue ==='musics'){
-        secondHalfScreen= <MusicComp />        
+        secondHalfScreen= <MusicComp menuOrNotProp = {propsValue} />        
 
     }else if(this.props.screenValue ==='games'){
         secondHalfScreen=<GamesComp />

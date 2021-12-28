@@ -8,7 +8,7 @@ const HomeComp =()=> {
     )}
     const styles = {
         coverthebox:{
-            backgroundColor: 'aqua',
+            backgroundColor: 'white',
             height:'129px',
             position: 'relative',
             top: '-13%',

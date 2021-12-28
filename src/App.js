@@ -13,12 +13,16 @@ class App extends React.Component {
     this.state = {
       Motion:0,
       mainScreenOrNot: true,
-      ScreenDisplay:''
+      ScreenDisplay:'',
+      musicScreen:false
     }
     this.currentAngle=0;
   }
+  
   zingoComponentTest = () =>{
+   
     console.log('upper this',this.state.Motion)
+
    let pthis = this;
     let myElement = document.getElementById('circle-boxx');
   //console.log('tmj',myElement)
@@ -27,6 +31,7 @@ class App extends React.Component {
  
   myRegion.bind(myElement, 'rotate', function(e) {
           console.log('Motion valuesss',pthis.state.Motion);
+         
       if(e.detail.distanceFromLast>=0) {
         console.log('clockwise motion i.e downward')
         if(MotionupOrdown <4){
@@ -58,35 +63,60 @@ class App extends React.Component {
 displayScreens =()=>{
   const motionValue = this.state.Motion;
   this.setState({
-    mainScreenOrNot:false
+    mainScreenOrNot:false,
+    
   })
   console.log('hey man!!',motionValue);
   if(motionValue === 0){
-     console.log('Cover fole',this.state);
+    if(this.state.musicScreen == false){
+    console.log(';asda',this.state)
+    console.log('Cover fole',this.state);
      this.setState({
-      ScreenDisplay:'covers'
+      ScreenDisplay:'covers',
+      musicScreen:false
      })
+    }else{
+      console.log('ffff')
+    }
   }else if(motionValue === 1){
+    if(this.state.musicScreen == false){
     console.log('Music',this.state);
     this.setState({
-      ScreenDisplay:'musics'
-     })
+      ScreenDisplay:'musics',
+      mainScreenOrNot:false,
+      musicScreen:true
+
+     })}
+     else{
+       console.log('ggg')
+     }
   }else if(motionValue===2) {
     console.log('games',this.state);
+    if(this.state.musicScreen == false){
     this.setState({
-      ScreenDisplay:'games'
-     })
+      ScreenDisplay:'games',
+      musicScreen:false
+     })}else{
+       console.log('llll')
+     }
   } else if(motionValue===3){
+    if(this.state.musicScreen == false){
     console.log('setting',this.state);
     this.setState({
-      ScreenDisplay:'setting'
-     })
+      ScreenDisplay:'setting',
+      musicScreen:false
+      
+     })}else{
+       console.log('ooplo')
+     }
   }
 }
 
 onMenu = ()=>{
   this.setState({
-    mainScreenOrNot:true
+    mainScreenOrNot:true,
+    musicScreen:false
+  
   })
 }
 render() {
@@ -95,7 +125,7 @@ render() {
     <div className="App">
         <h1>Mini project</h1>
         <div className='menu_and_touch'>
-        <MenuScreen motionValues = {this.state.Motion} screenValue = { this.state.ScreenDisplay } mainScreenOrNot = {this.state.mainScreenOrNot}/>
+        <MenuScreen motionValues = {this.state.Motion} screenValue = { this.state.ScreenDisplay } mainScreenOrNot = {this.state.mainScreenOrNot} musicScreen={this.state.musicScreen} />
         <Ipodtouch zingo = {this.zingoComponentTest} selectItem = {this.displayScreens}  onMenu = {this.onMenu}/>
       </div>
     </div>

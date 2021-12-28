@@ -10,11 +10,11 @@ body {
 .menu_and_touch{
   height: 291px;
   width: 160px;
-  border: 1px solid blue;
+ /* border: 1px solid blue; */
   position: relative;
   left: 50%;
-  border-radius: 11px;
-  background-color: silver;
+  border-radius: 25px;
+  background-color: #9E9E9E;
 }
 .main-box{
   height: 140px;
@@ -40,40 +40,49 @@ body {
   top: 23%;
   border: 1px solid black;
   border-radius: 50%;
-  background-color: white;
+  background-color: #9E9E9E;
   
 }
 .forward-button{
   position: absolute;
-  height: 10px;
-  width: 10px;
+  height: 14px;
+  width: 14px;
   top: 38%;
   right: 10%;
   /* border-top: 10px solid green; */
-  border-bottom: 10px solid green;
+  /* border-bottom: 10px solid green; */
 }
 .backward-button {
   position: absolute;
-  height: 10px;
-  width: 10px;
+  height: 14px;
+  width: 14px;
   top: 38%;
   left: 6%;
-  border-bottom: 10px solid green;
+  /* border-bottom: 10px solid green; */
 }
 .top-button{
   position: absolute;
   height: 10px;
   width: 10px;
-  top: -1%;
-  left: 46%;
-  border-bottom: 10px solid green;
+  top: 6%;
+  left: 37%;
+  font-size: 13px
+}
+.top-button a{
+  text-decoration: none;
+color: #9E9E9E;
+
 }
 .bottom-button{
   position: absolute;
-  height: 10px;
-  width: 10px;
-  top: 70%;
+  height: 14px;
+  width: 14px;
+  top: 76%;
   left: 46%;
   /* border-top: 10px solid green; */
-  border-bottom: 10px solid green;
+  /* border-bottom: 10px solid green; */
+}
+.icon-design{
+  height: 100%;
+  width: 100%;
 }
