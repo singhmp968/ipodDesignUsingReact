@@ -1,18 +1,20 @@
 import React from "react";
-const HomeComp =()=> {
+
+const AllSongComp =()=> {
     //console.log(props)
     return(
         <div style={styles.coverthebox}>
-            <p>Cover flow componenet</p>
+            <p>@ All Songs Comp componenet</p>
         </div>
     )}
     const styles = {
         coverthebox:{
             backgroundColor: 'white',
-            height:'129px',
+            height:'94px',
             position: 'relative',
             top: '-13%',
-            width: '140px'  
+            width: '137px' ,
+        border: '1px solid green'
         }
     }
-export default HomeComp;
+export default AllSongComp;

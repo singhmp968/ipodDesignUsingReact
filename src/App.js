@@ -53,6 +53,22 @@ class App extends React.Component {
         // for going upwnward 
         console.log('anti-clockwise motion i.e  upwardward')
 
+        // console.log('go',e.detail.distanceFromLast<0)
+
+        if(e.detail.distanceFromLast<0){
+          if( MotionupOrdown>0 && MotionupOrdown<4 ){
+            MotionupOrdown = MotionupOrdown-1;
+            pthis.setState({
+              Motion:MotionupOrdown
+              })
+            console.log('motions==>',MotionupOrdown);
+          }else if(MotionupOrdown <=0){
+            MotionupOrdown = 3;
+            pthis.setState({
+              Motion:MotionupOrdown
+              })
+          }
+        }
       }
   });
   //console.log('hey man')
@@ -69,14 +85,16 @@ displayScreens =()=>{
   console.log('hey man!!',motionValue);
   if(motionValue === 0){
     if(this.state.musicScreen == false){
-    console.log(';asda',this.state)
-    console.log('Cover fole',this.state);
+    // console.log(';asda',this.state)
+    // console.log('Cover fole',this.state);
      this.setState({
       ScreenDisplay:'covers',
       musicScreen:false
      })
     }else{
-      console.log('ffff')
+      this.setState({
+        ScreenDisplay :'All Songs'
+       })
     }
   }else if(motionValue === 1){
     if(this.state.musicScreen == false){
@@ -89,6 +107,9 @@ displayScreens =()=>{
      })}
      else{
        console.log('ggg')
+       this.setState({
+        ScreenDisplay :'Artist'
+       })
      }
   }else if(motionValue===2) {
     console.log('games',this.state);
@@ -98,6 +119,9 @@ displayScreens =()=>{
       musicScreen:false
      })}else{
        console.log('llll')
+       this.setState({
+        ScreenDisplay :'Album'
+       })
      }
   } else if(motionValue===3){
     if(this.state.musicScreen == false){

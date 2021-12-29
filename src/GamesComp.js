@@ -3,7 +3,8 @@ const GamesComp =()=> {
     //console.log(props)
     return(
         <div style={styles.coverthebox}>
-            <p>@ game componenet</p>
+                       <img style={styles.imageStyle} src="https://st4.depositphotos.com/1028436/22211/i/600/depositphotos_222117870-stock-photo-dice-black-background-illustration.jpg" />
+
         </div>
     )}
     const styles = {
@@ -11,8 +12,13 @@ const GamesComp =()=> {
             backgroundColor: 'white',
             height:'129px',
             position: 'relative',
-            top: '-13%',
+            top: '0%',
             width: '140px'  
+        },
+        imageStyle:{
+            height:'100%',
+            width:'100%'
         }
+    
     }
 export default GamesComp;

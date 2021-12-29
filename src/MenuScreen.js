@@ -13,7 +13,7 @@ render() {
     let ActiveAndNotActiveelem = []
     let c = 0;
     let secondHalfScreen='';
-    console.log('this props=> values',this.props.musicScreen)
+    console.log('this props=> values',this.props.motionValues)
     c = this.props.motionValues
     for(let i =0;i<MenuVaraibles.length;i++) {
         ActiveAndNotActiveelem.push(c===i ? (<div style={styles.upandDownSelect}> {MenuVaraibles[i]} </div>):
@@ -31,6 +31,12 @@ render() {
         secondHalfScreen=<GamesComp />
     }else if(this.props.screenValue ==='setting'){
         secondHalfScreen = <SettingComp />
+    }
+    //for passing the value to musc comp
+    else if(this.props.screenValue==='Artist' || this.props.screenValue==='All Songs' || this.props.screenValue==='Album'){
+        console.log('hiii Artist')
+        secondHalfScreen= <MusicComp menuOrNotProp = {propsValue} />        
+
     }
     }else{
         secondHalfScreen = ActiveAndNotActiveelem
