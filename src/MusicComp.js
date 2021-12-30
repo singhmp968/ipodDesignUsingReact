@@ -12,6 +12,7 @@ class MusicComp extends React.Component {
     let activeTItem = 0
     let ActiveAndNotActiveelem = []
     let c = 0;
+    let headertex = '';
     //let j=0;
     c = this.props.menuOrNotProp.motionValues
     console.log('this==>',this.props.menuOrNotProp)
@@ -39,9 +40,24 @@ class MusicComp extends React.Component {
             Screenvomp = ActiveAndNotActiveelem
         }
     }
+
+    // for displaying the heading 
+    console.log('musssssiicc>',this.props.menuOrNotProp)
+    
+    if(this.props.menuOrNotProp.screenValue === 'musics'){
+        headertex = 'Music'
+    }else if(this.props.menuOrNotProp.screenValue ==='Artist'){
+        headertex = 'Artist'
+    }else if(this.props.menuOrNotProp.screenValue ==='All Songs'){
+        headertex = 'All Songs'
+    }
+    else if(this.props.menuOrNotProp.screenValue ==='Album'){
+        headertex = 'Album'
+    }
     return(
         <div style={styles.coverthebox}>
-            <p>@ Music</p>
+           
+            <p>{headertex}</p>
 
         <div style={styles.display_box} >
         {
