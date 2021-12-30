@@ -1,7 +1,6 @@
 import React from "react";
 
 const ArtistComp =()=> {
-    //console.log(props)
     return(
         <div style={styles.coverthebox}>
             {/* <p>@ ArtistComp componenet</p> */}
