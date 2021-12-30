@@ -1,7 +1,6 @@
 import React from "react";
 
 const ArtistComp =()=> {
-    //console.log(props)
     return(
         <div style={styles.coverthebox}>
             {/* <p>@ ArtistComp componenet</p> */}
@@ -17,13 +16,6 @@ const ArtistComp =()=> {
             width: '137px' ,
         border: '1px solid green'
 
-
-            //background-color: white;
-//     height: 94px;
-//     top: -10%;
-//     width: 137px;
-//     border: 1px solid green;
-// }
         },
         imgStyle:{
             height:'100%',

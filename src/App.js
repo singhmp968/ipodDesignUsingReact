@@ -20,48 +20,32 @@ class App extends React.Component {
   }
   
   zingoComponentTest = () =>{
-   
-    console.log('upper this',this.state.Motion)
-
-   let pthis = this;
+    let pthis = this;
     let myElement = document.getElementById('circle-boxx');
-  //console.log('tmj',myElement)
-  let myRegion = new ZingTouch.Region(myElement);
-  let MotionupOrdown = pthis.state.Motion
+    let myRegion = new ZingTouch.Region(myElement);
+    let MotionupOrdown = pthis.state.Motion
  
-  myRegion.bind(myElement, 'rotate', function(e) {
-          console.log('Motion valuesss',pthis.state.Motion);
-         
+  myRegion.bind(myElement, 'rotate', function(e) {    
       if(e.detail.distanceFromLast>=0) {
-        console.log('clockwise motion i.e downward')
         if(MotionupOrdown <4){
           MotionupOrdown = MotionupOrdown+1;
-          console.log('motion value',MotionupOrdown);
           pthis.setState({
           Motion:MotionupOrdown
           })
         }else if(MotionupOrdown === 4) {
           MotionupOrdown = 0;
-          console.log('motion value',MotionupOrdown);
           pthis.setState({
             Motion:MotionupOrdown
           })
         }
 
       }else{ 
-
-        // for going upwnward 
-        console.log('anti-clockwise motion i.e  upwardward')
-
-        // console.log('go',e.detail.distanceFromLast<0)
-
         if(e.detail.distanceFromLast<0){
           if( MotionupOrdown>0 && MotionupOrdown<4 ){
             MotionupOrdown = MotionupOrdown-1;
             pthis.setState({
               Motion:MotionupOrdown
               })
-            console.log('motions==>',MotionupOrdown);
           }else if(MotionupOrdown <=0){
             MotionupOrdown = 3;
             pthis.setState({
@@ -71,7 +55,7 @@ class App extends React.Component {
         }
       }
   });
-  //console.log('hey man')
+
 }
 
 
@@ -82,11 +66,8 @@ displayScreens =()=>{
     mainScreenOrNot:false,
     
   })
-  console.log('hey man!!',motionValue);
   if(motionValue === 0){
     if(this.state.musicScreen == false){
-    // console.log(';asda',this.state)
-    // console.log('Cover fole',this.state);
      this.setState({
       ScreenDisplay:'covers',
       musicScreen:false
@@ -98,7 +79,6 @@ displayScreens =()=>{
     }
   }else if(motionValue === 1){
     if(this.state.musicScreen == false){
-    console.log('Music',this.state);
     this.setState({
       ScreenDisplay:'musics',
       mainScreenOrNot:false,
@@ -106,33 +86,29 @@ displayScreens =()=>{
 
      })}
      else{
-       console.log('ggg')
        this.setState({
         ScreenDisplay :'Artist'
        })
      }
   }else if(motionValue===2) {
-    console.log('games',this.state);
     if(this.state.musicScreen == false){
     this.setState({
       ScreenDisplay:'games',
       musicScreen:false
      })}else{
-       console.log('llll')
        this.setState({
         ScreenDisplay :'Album'
        })
      }
   } else if(motionValue===3){
     if(this.state.musicScreen == false){
-    console.log('setting',this.state);
     this.setState({
       ScreenDisplay:'setting',
       musicScreen:false
       
      })}else{
-       console.log('ooplo')
-     }
+ //SAS
+    }
   }
 }
 

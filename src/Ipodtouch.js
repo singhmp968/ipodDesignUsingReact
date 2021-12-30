@@ -8,7 +8,6 @@ class Ipodtouchcomp extends React.Component {
     }
 
     render() {
-        //console.log(this.props.zingo)
         return(
             <div className="main-box">
                 <div id='circle-boxx' className='circle-box' onMouseOver={()=> this.props.zingo()}>

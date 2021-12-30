@@ -1,6 +1,5 @@
 import React from "react";
 const HomeComp =()=> {
-    //console.log(props)
     return(
         <div style={styles.coverthebox}>
             <p>Cover flow componenet</p>

@@ -1,7 +1,6 @@
 import React from "react";
 
 const AlbumComp =()=> {
-    //console.log(props)
     return(
         <div style={styles.coverthebox}>
             {/* <p>@ Album componenet</p> */}

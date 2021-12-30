@@ -7,20 +7,17 @@ class MenuScreen extends React.Component {
 
 render() {
     const propsValue = this.props;
-    console.log('mnnnn',propsValue)
     let MenuVaraibles = ['cover flow','Musicss','games','setting'];
     let activeTItem = 0
     let ActiveAndNotActiveelem = []
     let c = 0;
     let secondHalfScreen='';
-    console.log('this props=> values',this.props.motionValues)
     c = this.props.motionValues
     for(let i =0;i<MenuVaraibles.length;i++) {
         ActiveAndNotActiveelem.push(c===i ? (<div style={styles.upandDownSelect}> {MenuVaraibles[i]} </div>):
         (<div style={styles.menuTitles}> {MenuVaraibles[i]} </div>)
     
         )}
-        console.log('==>',this.props.screenValue)
     if(!this.props.mainScreenOrNot){
     if(this.props.screenValue === 'covers'){  
         secondHalfScreen= <HomeComp />        
@@ -34,7 +31,6 @@ render() {
     }
     //for passing the value to musc comp
     else if(this.props.screenValue==='Artist' || this.props.screenValue==='All Songs' || this.props.screenValue==='Album'){
-        console.log('hiii Artist')
         secondHalfScreen= <MusicComp menuOrNotProp = {propsValue} />        
 
     }
