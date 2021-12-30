@@ -54,14 +54,14 @@ class MusicComp extends React.Component {
 }
     const styles = {
         coverthebox:{
-            backgroundColor: '#e2e2e2',
+            backgroundColor: 'bisque',
             height:'129px',
             position: 'relative',
             top: '-13%',
             width: '140px'  
         },
         display_box:{
-            border:'1px solid black',
+            // border:'1px solid black',
             width: '86px',
             position: 'absolute',
             top: '24%'
@@ -98,7 +98,8 @@ class MusicComp extends React.Component {
         menuTitles : {
             height:'30px',
             width:'85px',
-            border:'1px solid black'
+            border:'1px solid black',
+            backgroundColor:'white'
         },
         upandDownSelect : {
             height:'29px',

@@ -31,7 +31,7 @@ class Ipodtouchcomp extends React.Component {
                    
                     <img  class='icon-design'
                      alt='play and pause'
-                     src=' https://cdn-icons.flaticon.com/png/512/647/premium/647801.png?token=exp=1640669601~hmac=4b7d55b3c029346567dfb3f37f850118'
+                     src='https://cdn-icons.flaticon.com/png/512/647/premium/647801.png?token=exp=1640841628~hmac=0521c69d3fb2fd311704a5ba31f10c61'
                     />       
                     </div>
                     <div className="inner-circle" onClick = {()=> this.props.selectItem()} >
