@@ -1,6 +1,6 @@
 import React from 'react';
 //import ZingTouch from 'zingtouch';
-
+//************  this method is for providing the circular i.e touchpad components are 
 
 class Ipodtouchcomp extends React.Component {
     constructor() {
@@ -8,6 +8,7 @@ class Ipodtouchcomp extends React.Component {
     }
 
     render() {
+    
         return(
             <div className="main-box">
                 <div id='circle-boxx' className='circle-box' onMouseOver={()=> this.props.zingo()}>

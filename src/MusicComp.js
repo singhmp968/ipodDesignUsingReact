@@ -2,12 +2,13 @@ import React from "react";
 import ArtistComp from "./musicSubComponent/Artist"
 import AllSongComp from "./musicSubComponent/All_Songs";
 import AlbumComp from "./musicSubComponent/Album";
+// this componenet is responsible for handling the upward and downward movent of the zingo element in the meno of  Music comp 
 class MusicComp extends React.Component {
     constructor() {
         super();
     }
     render() {
-    let Musicecate = ['All Songs','Artist','Album'];
+    let Musicecate = ['All Songs','Artist','Album']; //list of items need to be dispalyed
     let activeTItem = 0
     let ActiveAndNotActiveelem = []
     let c = 0;
@@ -16,13 +17,13 @@ class MusicComp extends React.Component {
     c = this.props.menuOrNotProp.motionValues
     let Screenvomp='';
 
-    for(let i =0;i<Musicecate.length;i++) {
+    for(let i =0;i<Musicecate.length;i++) { // applying the same logic here of activ and for inactive
         ActiveAndNotActiveelem.push(c===i ? (<div style={styles.upandDownSelect}> {Musicecate[i]} </div>):
         (<div style={styles.menuTitles}> {Musicecate[i]} </div>)
     
         )}      
 
-   if(this.props.menuOrNotProp.musicScreen){
+   if(this.props.menuOrNotProp.musicScreen){ // if the music screen and the we select any of the comp and it will render
         if(this.props.menuOrNotProp.screenValue === 'Artist'){  
             Screenvomp= <ArtistComp />        
          }else if(this.props.menuOrNotProp.screenValue ==='All Songs'){
